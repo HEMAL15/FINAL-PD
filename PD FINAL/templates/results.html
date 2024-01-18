@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0f3567;
+            color: white;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        .results-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .prediction-info {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>Results Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recommendation.html">Recommendation Page</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="results-section">
+            <h2>Results Dashboard</h2>
+            <p>The user input is:</p>
+            <ul>
+                {% for key, value in user_input.items() %}
+                    <li>{{ key }}: {{ value }}</li>
+                {% endfor %}
+            </ul>
+            <p>The predicted plugin based on user input is: {{ predicted_plugin }}</p>
+            <p>The predicted codec based on user input is: {{ predicted_codec }}</p>
+            <p>The predicted level based on user input is: {{ predicted_level }}</p>
+
+        </section>
+        </section>
+        <img src="Screenshot (206).png" alt="Your Image" style="margin-right: 10px; height:40, width=40">
+   
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Compression Master, AMMOGDEVS. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
